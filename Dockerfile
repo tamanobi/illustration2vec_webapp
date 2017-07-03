@@ -10,5 +10,6 @@ RUN \
     cd illustration2vec && ./get_models.sh && \
     rm -rf /var/lib/apt/lists/* && apt-get clean
 EXPOSE 5000
+COPY ./run.sh ./run.sh
 CMD ["./run.sh"]
 
