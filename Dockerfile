@@ -4,7 +4,6 @@ WORKDIR /home
 COPY packages.txt /home
 RUN \
     #apt-get update && apt-get install git curl && \
-    echo "hey" && \
     pip install -r packages.txt && \
     git clone --depth=1 --branch feature/web_api --single-branch https://github.com/tamanobi/illustration2vec.git && \
     cd illustration2vec && ./get_models.sh && \
